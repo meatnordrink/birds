@@ -1,0 +1,6 @@
+>>blank=""
+*question: {blank}
+	Learn
+		*program: andy-bird_learn
+	Practice
+		*program: andy-bird_practice

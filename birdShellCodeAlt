@@ -1,0 +1,9 @@
+>>blank=""
+*navigation
+	{blank}
+		*icon: 
+		*switch: 
+	{blank}
+		*icon:
+		*switch: 
+		*classes: centerNav

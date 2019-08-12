@@ -1,0 +1,167 @@
+--to make this just birds one's learned, it will be easier if I can use variables in *audio
+*label: beginPractice
+>>birdGroups=["Common Yard birds, complex songs", "Common Warblers"]
+
+*question: Which group would you like to practice? 
+	*answers: birdGroups
+	*save: selection
+
+*if: selection="Common Yard birds, complex songs"
+	*randomize
+		*group
+			*label: robin1
+			*audio: http://cdn.audubon.org/cdn/farfuture/FLQ-9BopYVNQynnamq3akKzq10AhvU7YNjYzRQIHvT4/mtime:1416244637/sites/default/files/AMEROB_1.songnum1_NYle.mp3?uuid=5a6e33776400d
+				*start: yes
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Robin"
+				Right!
+			*if: not answerChosen="Robin"
+				Try again!
+				*goto: robin1
+		*group
+			*label: robin2
+			*audio: http://cdn.audubon.org/cdn/farfuture/liAQtjSizLu5PZbBAFqk-_qJhrUtXIww3Go13w2lX6A/mtime:1416244637/sites/default/files/AMEROB_7.whinnycalls_NYle.mp3?uuid=5aef4cae5795c
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Robin"
+				Right!
+			*if: not answerChosen="Robin"
+				Try again!
+				*goto: robin2
+		*group
+			*label: chipping1
+			*audio: http://cdn.audubon.org/cdn/farfuture/gEWiGPO3An03tVxO2xJL5lrLP0dMo1_grYhou4ruxsQ/mtime:1416244677/sites/default/files/CHISPA_1.fast-pulsedsong_NYle_1.mp3?uuid=5aef1af2bd358
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Chipping Sparrow"
+				Right!
+			*if: not answerChosen="Chipping Sparrow"
+				Try again!
+				*goto: chipping1
+		*group
+			*label: chipping2
+			*audio: http://cdn.audubon.org/cdn/farfuture/LhIjrOxK6pYSCu-jNnuh8g5l8VKyp9makv4INIKDMBQ/mtime:1416244677/sites/default/files/CHISPA_2.slow-pulsedsong_NYle_1.mp3?uuid=5aef1af2bdc9b
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Chipping Sparrow"
+				Right!
+			*if: not answerChosen="Chipping Sparrow"
+				Try again!
+				*goto: chipping2
+		*group
+			*label: catbird1
+			*audio: https://cdn.audubon.org/cdn/farfuture/6KPs9FmFE34qc-OgPccr7rjHBianKtsgMOKnzPwdIWo/mtime:1416244638/sites/default/files/GRACAT_1.songnum1_NYle.mp3?uuid=5b0f3f171ae46
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Catbird"
+				Right!
+			*if: not answerChosen="Catbird"
+				Try again!
+				*goto: catbird1
+		*group
+			*label: catbird2
+			*audio: https://cdn.audubon.org/cdn/farfuture/ylZ-Y5mCpOn-nOcpCVRsDvNzJRdvfxtPUhTpkBD7geA/mtime:1416244638/sites/default/files/GRACAT_2.songnum2_IAle.mp3?uuid=5b0f3f171b9a7
+			>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Catbird"
+				Right!
+			*if: not answerChosen="Catbird"
+				Try again!
+				*goto: catbird2
+
+
+*if: selection="Common Warblers"
+	*randomize
+		*group
+			*label: yellow1
+			*audio: https://cdn.audubon.org/cdn/farfuture/47-F7CLOnb_ErKgpiLjoPp27XZ_ur-g7ynlbP9ElCxY/mtime:1416244649/sites/default/files/YELWAR_1.songsnum1_NYle_1.mp3?uuid=5b0f0165c668d
+			>>practiceAnswers=["Black and White", "Black-Throated Green", "Yellowthroat", "Yellow"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Yellow"
+				Right!
+			*if: not answerChosen="Yellow"
+				Try again!
+				*goto: yellow1
+		*group
+			*label: yellow2
+			*audio: https://cdn.audubon.org/cdn/farfuture/0r4kST_1YSBJaCBCmJCQUhbqHbFUWUpLL_cbDAlaZVc/mtime:1416244649/sites/default/files/YELWAR_2.songsnum2_NYle_1.mp3?uuid=5b0f0165c73fd
+			>>practiceAnswers=["Black and White", "Black-Throated Green", "Yellowthroat", "Yellow"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Yellow"
+				Right!
+			*if: not answerChosen="Yellow"
+				Try again!
+				*goto: yellow2
+*if: selection="Uncategorized"
+	*randomize
+		*group
+			*label: blackBurnian1
+			*audio: http://cdn.audubon.org/cdn/farfuture/VMlchly-LeA05GSPUtrFDF_KtHWC7aiKJA8acpkhkcc/mtime:1416244646/sites/default/files/BLBUWA_1.songsnum1_NYle_1.mp3?uuid=5aef2a7456b10
+			>>practiceAnswers=["Black and White", "Black-Throated Green", "Yellowthroat", "Yellow"]
+			*question: Which bird? 
+				*answers: practiceAnswers
+				*save:answerChosen
+			*if: answerChosen="Blackburnian"
+				Right!
+			*if: not answerChosen="Blackburnian"
+				Try again!
+				*goto: blackburnian1
+*goto: beginPractice
+
+	*group
+		*label: 
+		*audio: 
+		>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+		*question: Which bird? 
+			*answers: practiceAnswers
+			*save:answerChosen
+		*if: answerChosen=""
+			Right!
+		*if: not answerChosen=""
+			Try again!
+			*goto: 
+	*group
+		*label: 
+		*audio: 
+		>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+		*question: Which bird? 
+			*answers: practiceAnswers
+			*save:answerChosen
+		*if: answerChosen=""
+			Right!
+		*if: not answerChosen=""
+			Try again!
+			*goto: 
+	*group
+		*label: 
+		*audio: 
+		>>practiceAnswers=["Robin", "Cardinal", "Chipping Sparrow", "Catbird"]
+		*question: Which bird? 
+			*answers: practiceAnswers
+			*save:answerChosen
+		*if: answerChosen=""
+			Right!
+		*if: not answerChosen=""
+			Try again!
+			*goto: 
+
+
+
+*goto: beginPractice

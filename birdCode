@@ -1,0 +1,161 @@
+--source: http://www.audubon.org/bird-guide?search_api_views_fulltext=white%20throated%20sparrow&field_bird_family_tid=All&field_bird_region_tid=All
+>>commonYardComplex=["Robin", "Chipping Sparrow", "Cardinal", "Catbird"]
+>>commonWarblers=["Black-throated Green", "Yellow", "Black and White", "Yellowthroat"]
+--entered, but unclassified: White Throated Sparrow, Blackburnian, Tufted Titmouse
+*label: beginLearn
+*question: Which group would you like to learn? 
+	Common Yard Birds, complex songs
+		>>choices=commonYardComplex
+	Common Warblers
+		>>choices=commonWarblers
+*label: chooseBird
+*question: Which bird would you like to learn? 
+	*answers: choices
+	*save: selection
+
+*if: selection="White Throated Sparrow"
+	*image: {whiteThroatedSparrow["image"]}
+	*label: beginWTS
+	*question: Which to hear? 
+		Call 1
+			*audio: http://cdn.audubon.org/cdn/farfuture/PvzEw3o3oDmfNS574IrFhvVByi44dgReanEYOJGkwSo/mtime:1416244678/sites/default/files/WHTHSP_1.songsnum1_NYle_1.mp3?uuid=5ae3642136486
+				*start: yes
+		Call 2
+			*audio: http://cdn.audubon.org/cdn/farfuture/l1EdahNjQrLalxgBTJb8QDTO3dk7xVuXfcOUB6ug0e8/mtime:1416244678/sites/default/files/WHTHSP_2.songsnum2_NYle_1.mp3?uuid=5ae3642136ccd
+				*start: yes
+		Back 
+			*goto: chooseBird
+	*goto: beginWTS
+
+*if: selection="Blackburnian Warbler"
+	*label: beginBlackB
+	*image: http://cdn.audubon.org/cdn/farfuture/qYIOFy7KcDo4gzHHQZ7T-fbSVRysbIc8dzHffQClmdU/mtime:1486721932/sites/default/files/styles/bird_illustration/public/4661_Sibl_9780307957900_art_r1.jpg?itok=h-2JZSYz
+	*question: Which to hear?
+		Call 1
+			*audio: http://cdn.audubon.org/cdn/farfuture/VMlchly-LeA05GSPUtrFDF_KtHWC7aiKJA8acpkhkcc/mtime:1416244646/sites/default/files/BLBUWA_1.songsnum1_NYle_1.mp3?uuid=5aef2a7456b10
+				*start: yes
+		Call 2
+			*audio: http://cdn.audubon.org/cdn/farfuture/L32NVbH3wpcsZl0Wx0ed4iCz9ffzA8j1Sf7b4lMkDeA/mtime:1416244646/sites/default/files/BLBUWA_2.songsnum2_NYle_1.mp3?uuid=5aef2a7457421
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginBlackB
+*if: selection="Chipping Sparrow"
+	*label: chipSparrow
+	*image: http://cdn.audubon.org/cdn/farfuture/DvMbbKXWjHlSJkgs0KlhXiAodJceif6-sQ9dQVsrmDU/mtime:1486698793/sites/default/files/styles/bird_illustration/public/6454_Sibl_9780307957900_art_r1.jpg?itok=8Dor9zqC
+	*question: Which to hear?
+		Call 1
+			*audio:http://cdn.audubon.org/cdn/farfuture/gEWiGPO3An03tVxO2xJL5lrLP0dMo1_grYhou4ruxsQ/mtime:1416244677/sites/default/files/CHISPA_1.fast-pulsedsong_NYle_1.mp3?uuid=5aef1af2bd358 
+				*start: yes
+		Call 2
+			*audio: http://cdn.audubon.org/cdn/farfuture/LhIjrOxK6pYSCu-jNnuh8g5l8VKyp9makv4INIKDMBQ/mtime:1416244677/sites/default/files/CHISPA_2.slow-pulsedsong_NYle_1.mp3?uuid=5aef1af2bdc9b
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: chipSparrow
+*if: selection="Yellowthroat"
+	*image: https://cdn.audubon.org/cdn/farfuture/4kLsc_w83nn84di9mf0Z4pkwDss5aUSH5VEkSqBPstU/mtime:1486701385/sites/default/files/styles/bird_illustration/public/5384_Sibl_9780307957900_art_r1.jpg?itok=7CR6dKOa
+	*label: beginYellowThroat
+	*question: Which to hear?
+		Call 1
+			*audio: https://cdn.audubon.org/cdn/farfuture/yv5JsdbQFjQvDddl7d_7XbCjvbA7x81Ym2HDe2ufyM0/mtime:1416244651/sites/default/files/COMYEL_1.songsnum1_NYle_1.mp3?uuid=5b19a757100d4
+				*start: yes
+		Call 2
+			*audio: https://cdn.audubon.org/cdn/farfuture/gtbwclUnVVuccxtAzjXlbdSgaccNuM3taMiM4VYjkng/mtime:1416244651/sites/default/files/COMYEL_10.chattercall_NYle_1.mp3?uuid=5b19a7571099b
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginYellowThroat
+*if: selection="Robin"
+	*image: http://cdn.audubon.org/cdn/farfuture/3-yqTJGgZ0MzviGbUqzMFN7OMF3hohVF_KfMIj1-lqI/mtime:1486710975/sites/default/files/styles/bird_illustration/public/3248_Sibl_9780307957900_art_r1.jpg
+	*label: beginRobin
+	*question: Which to hear?
+		Call 1
+			*audio: http://cdn.audubon.org/cdn/farfuture/FLQ-9BopYVNQynnamq3akKzq10AhvU7YNjYzRQIHvT4/mtime:1416244637/sites/default/files/AMEROB_1.songnum1_NYle.mp3?uuid=5a6e33776400d
+				*start: yes
+		Call 2
+			*audio: http://cdn.audubon.org/cdn/farfuture/liAQtjSizLu5PZbBAFqk-_qJhrUtXIww3Go13w2lX6A/mtime:1416244637/sites/default/files/AMEROB_7.whinnycalls_NYle.mp3?uuid=5aef4cae5795c
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginRobin
+*if: selection="Catbird"
+	*image: https://cdn.audubon.org/cdn/farfuture/lLGoTTI9MwfjY3Vlwrhl6g9OSIa1jCWn115DIfZGpN4/mtime:1486746816/sites/default/files/styles/bird_illustration/public/3023_Sibl_9780307957900_art_r1.jpg?itok=E3tOYG_y
+	*label: beginCatbird
+	*question: Which to hear?
+		Call 1
+			*audio: https://cdn.audubon.org/cdn/farfuture/6KPs9FmFE34qc-OgPccr7rjHBianKtsgMOKnzPwdIWo/mtime:1416244638/sites/default/files/GRACAT_1.songnum1_NYle.mp3?uuid=5b0f3f171ae46
+				*start: yes
+		Call 2
+			*audio: https://cdn.audubon.org/cdn/farfuture/ylZ-Y5mCpOn-nOcpCVRsDvNzJRdvfxtPUhTpkBD7geA/mtime:1416244638/sites/default/files/GRACAT_2.songnum2_IAle.mp3?uuid=5b0f3f171b9a7
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginCatbird	
+*if: selection="Black-throated Green"
+	*image: http://cdn.audubon.org/cdn/farfuture/qB1CDO2U2gzGGsH1YjeymgZJ_6_2M7KGndwmQwpfF2U/mtime:1486684619/sites/default/files/styles/bird_illustration/public/082_Sibl_9780307957900_art_r1.jpg?itok=WC8vn-5t
+	*label: beginBTG
+	*question: Which to hear?
+		Call 1
+			*audio:http://cdn.audubon.org/cdn/farfuture/fHbhU3bQPepiaNAIXRZf0rVGXys5mjaTxdH1WeLeld4/mtime:1416244651/sites/default/files/BTGNWA_1.songsnum1_MBle_1.mp3?uuid=5ae5bcbb9ab4e
+				*start: yes
+		Call 2
+			*audio:http://cdn.audubon.org/cdn/farfuture/botA8GsDmRX-2ygoB8DzTpdDysWdMpWA0uLbt_U4rBc/mtime:1416244651/sites/default/files/BTGNWA_2.songsnum2_NYle_1.mp3?uuid=5ae5bcbb9b4a2
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginBTG
+*if: selection="Yellow"
+	*image:https://cdn.audubon.org/cdn/farfuture/OeEn7MAs2OUKTG51MMCnEdzvtoadLwAVp_qqjamrUJQ/mtime:1486690985/sites/default/files/styles/bird_illustration/public/4316_Sibl_9780307957900_art_r1.jpg?itok=5Qz55JLb
+	*label:beginYellow
+	*question: Which to hear?
+		Call 1
+			*audio:https://cdn.audubon.org/cdn/farfuture/47-F7CLOnb_ErKgpiLjoPp27XZ_ur-g7ynlbP9ElCxY/mtime:1416244649/sites/default/files/YELWAR_1.songsnum1_NYle_1.mp3?uuid=5b0f0165c668d
+				*start: yes
+		Call 2
+			*audio:https://cdn.audubon.org/cdn/farfuture/0r4kST_1YSBJaCBCmJCQUhbqHbFUWUpLL_cbDAlaZVc/mtime:1416244649/sites/default/files/YELWAR_2.songsnum2_NYle_1.mp3?uuid=5b0f0165c73fd
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto:beginYellow
+*if: selection="Black and White"
+	*image: http://cdn.audubon.org/cdn/farfuture/yPo9ymFM_FWI9Nw9WuU1zjDqRNz58vDtuWBfiVwW9tk/mtime:1486719829/sites/default/files/styles/bird_illustration/public/4218_Sibl_9780307957900_art_r1.jpg?itok=cJx6GHTU
+	*label: beginBW
+	*question: Which to hear?
+		Call 1
+			*audio:http://cdn.audubon.org/cdn/farfuture/3l5ak1E9t--zvsLFw9CJt9-3QcSN6wUxzlvYkqMRs_E/mtime:1416244653/sites/default/files/BAWHWA_1.songsnum1_NYle_1.mp3?uuid=5ae5b56cc145b
+				*start: yes
+		Call 2
+			*audio: http://cdn.audubon.org/cdn/farfuture/RiSn2u_SXSfAU7KbDPBZrl3rrqcitb7xML11xT3tkg8/mtime:1416244653/sites/default/files/BAWHWA_2.songsnum2_KYle_1.mp3?uuid=5ae5b56cc21b4
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginBW	
+*goto: beginLearn
+
+*if: selection="Cardinal"
+	*image: 
+	*label: beginCardinal
+	*question: Which to hear?
+		Call 1
+			*audio:
+				*start: yes
+		Call 2
+			*audio: 
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto: beginCardinal
+*if: selection=""
+	*image: 
+	*label:
+	*question: Which to hear?
+		Call 1
+			*audio:
+				*start: yes
+		Call 2
+			*audio: 
+				*start: yes
+		Back
+			*goto: chooseBird
+	*goto:
